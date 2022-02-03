@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  min-height: 100%;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+body #hero {
+  height: 1080px;
+  background-color: #12002b;
+  transition: ease-in-out 3s animation;
+  -webkit-animation: infinite 5s changeColor;
+          animation: infinite 5s changeColor;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /*HERO STYLE*/
+  /*HERO TOP STYLE*/
+  /*hero-container area*/
+}
+body #hero.hero-page {
+  width: 100%;
+  display: flex;
+  padding: 0px 25px;
+  align-items: center;
+  background-image: linear-gradient(180deg, rgba(1, 3, 38, 0) 52%, #000000), linear-gradient(95deg, #110220 43%, rgba(1, 3, 38, 0.15));
+}
+body #hero .contact-button {
+  padding: 5px 22px;
+  border: none;
+  background: #6310eb;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: ease-in-out 0.4s;
+  font-size: max(1.1vw, 0.7rem);
+}
+body #hero .contact-button:hover {
+  background-color: #772bff;
+  border-radius: 3px 13px 3px 13px;
+}
+body #hero .hero-top {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+  background-color: #1102208f;
+}
+body #hero .hero-top .img {
+  width: min(30vw, 265px);
+}
+body #hero .hero-top .img img {
+  width: 100%;
+}
+body #hero .hero-top .bx {
+  font-size: 36px;
+  color: #6310eb;
+  cursor: pointer;
+  transition: 0.4s ease-in-out color;
+}
+body #hero .hero-top .bx:hover {
+  color: #772bff;
+}
+body #hero .hero-top #openMenu {
+  display: none;
+}
+body #hero .hero-top #closeMenu {
+  display: none;
+}
+body #hero .hero-top #menu {
+  list-style-type: none;
+  display: flex;
+  margin-left: 10px;
+  align-items: baseline;
+}
+body #hero .hero-top #menu #openMenu {
+  display: none;
+}
+body #hero .hero-top #menu .topo-menu_item {
+  margin: 0 19px;
+}
+body #hero .hero-top #menu .topo-menu_item .topo-menu_link {
+  color: #e4d4ff;
+  text-decoration: none;
+  font-size: min(2.3vw, 0.9rem);
+}
+body #hero .hero-top #menu .topo-menu_item .topo-menu_link.active {
+  font-weight: 700;
+}
+body #hero .hero-top #menu .topo-menu_item .topo-menu_link:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px #772bff;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+  margin-top: 5px;
+}
+body #hero .hero-top #menu .topo-menu_item .topo-menu_link:hover {
+  color: white;
+}
+body #hero .hero-top #menu .topo-menu_item .topo-menu_link:hover:after {
+  transform: scaleX(1);
+}
+body #hero #container-page {
+  width: 100%;
+  min-height: 600px;
+  display: grid;
+  position: absolute;
+  top: 100px;
+  grid-template-areas: "esq dir" "esq dir";
+  gap: 18px;
+  z-index: 10;
+  padding: 50px;
+  justify-items: center;
+}
+body #hero #container-page .esq {
+  width: 40vw;
+  grid-area: esq;
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+}
+body #hero #container-page .esq h3 {
+  font-size: min(6vw, 1.5rem);
+  color: white;
+  margin-bottom: 30px;
+}
+body #hero #container-page .esq h3 i {
+  color: #772bff;
+}
+body #hero #container-page .esq h1 {
+  color: white;
+  font-size: min(7vw, 2.2rem);
+  line-height: min(6vh, 2.5rem);
+}
+body #hero #container-page .esq p {
+  font-size: min(3vw, 1rem);
+  color: white;
+  margin-top: 15px;
+}
+body #hero #container-page .esq .contact-button {
+  align-self: center;
+  margin: 38px;
+  padding: 10px 55px;
+  font-size: min(4vw, 1.1rem);
+}
+body #hero #container-page .dir {
+  width: 40vw;
+  background-color: #ffefef;
+  grid-area: dir;
+}
+@-webkit-keyframes changeColor {
+  0% {
+    background-color: #12002b;
+  }
+  50% {
+    background-color: #070011;
+  }
+  100% {
+    background-color: #12002b;
+  }
+}
+@keyframes changeColor {
+  0% {
+    background-color: #12002b;
+  }
+  50% {
+    background-color: #070011;
+  }
+  100% {
+    background-color: #12002b;
+  }
+}
+@media (min-width: 1440px) {
+  body #hero .hero-page {
+    padding: 50px 30px;
+  }
+  body #hero .hero-top .img {
+    width: max(5vw, 300px);
+  }
+  body #hero .hero-top #menu .topo-menu_link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: min(2.3vw, 1.5rem) !important;
+  }
+}
+@media (max-width: 500px) {
+  body #hero .hero-page {
+    width: 100%;
+    display: flex;
+    padding: 10px 15px;
+  }
+  body #hero .hero-top {
+    justify-content: space-between !important;
+    padding: 0 15px;
+  }
+  body #hero .hero-top .img {
+    width: max(4vw, 140px);
+  }
+  body #hero .hero-top #openMenu {
+    display: flex;
+  }
+  body #hero .hero-top #menu {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    position: fixed;
+    background: #0a0119;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 20px 0 13px 0;
+    transform: translateY(-100vh);
+    justify-content: center;
+    align-items: center;
+  }
+  body #hero #menu #closeMenu {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    margin: 8px;
+  }
+  body #hero .menuShow {
+    transform: translateY(0vh) !important;
+  }
+  body #hero .hero-top #menu .topo-menu_item {
+    margin-bottom: 50px;
+  }
+  body #hero .hero-top #menu .topo-menu_item .contact-button {
+    font-size: max(4vw, 0.7rem) !important;
+    padding: 10px 25px;
+  }
+  body #hero .hero-top #menu .topo-menu_link {
+    font-size: max(5vw, 0.7rem) !important;
+  }
+  body #hero .topo-menu_link:after {
+    border-bottom: solid 2px #772bff;
+  }
+  body #hero .topo-menu_link:hover:after {
+    transform: scaleX(100%);
+  }
+}
+@media (max-width: 498px) {
+  body #hero .hero-top #menu {
+    transition: 0.4s ease-in-out transform;
+  }
+}
+@media (max-width: 768px) {
+  body #hero #container-page {
+    grid-template-areas: "esq esq" "dir dir";
+  }
+  body #hero #container-page .esq, body #hero #container-page .dir {
+    width: 100% !important;
+  }
+}
+@media (max-width: 425px) {
+  body #hero #container-page {
+    padding: 20px;
+  }
+  body #hero .esq p {
+    font-size: 13px !important;
+  }
+}/*# sourceMappingURL=style.css.map */
