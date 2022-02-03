@@ -60,3 +60,18 @@ const criarCard = (repos) => {
 };
 
 criarCard(getFunction());
+
+
+// Menu Toggle
+
+const menuToggle = () =>{
+  const navbar = document.querySelector('.navbar')
+  const hamburguer = document.querySelector('#hamburguer').addEventListener('click', () =>{
+    navbar.classList.add('menushow')
+  })
+  const close = document.querySelector('#close').addEventListener('click', () =>{
+    navbar.classList.remove('menushow')
+  })
+}
+
+menuToggle()

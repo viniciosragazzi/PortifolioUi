@@ -73,10 +73,19 @@ body {
         color: rgb(255, 255, 255);
       }
     }
+    #hamburguer{
+      display: none;
+      color: white;
+      font-size: 25px;
+    }
+    #close{
+      display: none;
+    }
     ul {
       display: flex;
       list-style-type: none;
       align-items: center;
+      transition: .5s ease transform;
       li {
         a {
           margin: 0 17px;
@@ -272,7 +281,41 @@ body {
 @media (max-width: 375px) {
 }
 @media (max-width: 425px) {
+  #hamburguer{
+    display: block !important;
+  }
+  .menushow{
+    transform: translateY(0px);
+  }
+  body header ul {
+    flex-direction: column;
+    position: absolute;
+    background: #862aff;
+    width: 100%;
+    height: 100vh;
+    transform: translateY(-105vh);
+    top: 0;
+    left: 0;
+    justify-content: center;
 
+    #close{
+      display: block !important;
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 45px;
+      margin: 10px;
+      color: white;
+    }
+  }
+  body header ul li{
+    margin: 20px 0;
+    font-size: 25px;
+  }
+  
+  body main #projects .projetos-cards {
+    width: 100%;
+  }
 }
 @media (max-width: 657px) {
 
