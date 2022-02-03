@@ -9,7 +9,7 @@
 :root {
   --cor1: #242424;
   --cor2: #202020;
-  --ltwhite:white;
+  --ltwhite: white;
   --gray: #1d1d1f;
 }
 a {
@@ -74,19 +74,19 @@ body {
         color: rgb(255, 255, 255);
       }
     }
-    #hamburguer{
+    #hamburguer {
       display: none;
       color: white;
       font-size: 25px;
     }
-    #close{
+    #close {
       display: none;
     }
     ul {
       display: flex;
       list-style-type: none;
       align-items: center;
-      transition: .5s ease transform;
+      transition: 0.5s ease transform;
       li {
         a {
           margin: 0 17px;
@@ -102,11 +102,11 @@ body {
     }
   }
   main {
-    .title-section{
+    .title-section {
       font-family: "Roboto Mono", monospace;
-      font-size: 50px;
+      font-size: min(9vw, 50px);
       font-weight: 300;
-      color: var(--gray);;
+      color: var(--gray);
       padding-left: 50px;
     }
     #container-welcome {
@@ -120,7 +120,7 @@ body {
       align-items: center;
       grid-template-columns: 1fr 1fr;
       color: white;
-     
+
       h1 {
         font-size: 60px;
         font-weight: 300;
@@ -139,8 +139,6 @@ body {
       padding: 20px 0;
       font-family: "Roboto Mono", monospace;
 
-   
-
       .projetos-cards {
         width: 95%;
         display: flex;
@@ -158,59 +156,55 @@ body {
           display: flex;
           flex-direction: column;
           padding: 15px;
-          transition: .4s ease transform;
+          transition: 0.4s ease transform;
           overflow: hidden;
-         
-          &:hover{
-              cursor: pointer;
-              transform: translateY(-5px);
-              box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.24);
+
+          &:hover {
+            cursor: pointer;
+            transform: translateY(-5px);
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.24);
           }
-          &.html{
+          &.html {
             color: var(--ltwhite) !important;
             background-color: var(--cor1);
-            &> .categoria-projeto {
+            & > .categoria-projeto {
               border: 1px solid white;
             }
-            &> .nome-projeto h4{
+            & > .nome-projeto h4 {
               color: white;
             }
-
           }
-          &.scss{
-            color: var(--ltwhite) !important;
-            background-color:var(--cor1);
-            &> .categoria-projeto {
-              border: 1px solid white;
-            }
-            &> .nome-projeto h4{
-              color: white;
-            }
-
-          }
-
-          &.css{
+          &.scss {
             color: var(--ltwhite) !important;
             background-color: var(--cor1);
-            &> .categoria-projeto {
+            & > .categoria-projeto {
               border: 1px solid white;
             }
-            &> .nome-projeto h4{
+            & > .nome-projeto h4 {
               color: white;
             }
-
           }
 
-          &.js{
+          &.css {
             color: var(--ltwhite) !important;
             background-color: var(--cor1);
-            &> .categoria-projeto {
+            & > .categoria-projeto {
               border: 1px solid white;
             }
-            &> .nome-projeto h4{
+            & > .nome-projeto h4 {
               color: white;
             }
+          }
 
+          &.js {
+            color: var(--ltwhite) !important;
+            background-color: var(--cor1);
+            & > .categoria-projeto {
+              border: 1px solid white;
+            }
+            & > .nome-projeto h4 {
+              color: white;
+            }
           }
           &.primeiro {
             background-color: var(--gray);
@@ -218,17 +212,15 @@ body {
             width: 660px;
             border-radius: 15px;
             h4 {
-               
-                color:white;
-              }
+              color: white;
+            }
             .categoria-projeto {
-                border: 2px solid rgb(255, 255, 255);
-                border-radius: 10px;
-              }
-              .descricao-projeto {
-                font-size: 16px;
-              
-              }
+              border: 2px solid rgb(255, 255, 255);
+              border-radius: 10px;
+            }
+            .descricao-projeto {
+              font-size: 16px;
+            }
           }
           .categoria-projeto {
             width: fit-content;
@@ -249,46 +241,132 @@ body {
             position: absolute;
             bottom: 20px;
 
-
-            a{
-                position: relative;
-               width: fit-content;
-                font-size: 25px;
-                left: 90%;
-                color: black;
+            a {
+              position: relative;
+              width: fit-content;
+              font-size: 25px;
+              left: 90%;
+              color: black;
             }
           }
         }
       }
     }
-    #artigosArea{
+    #artigosArea {
       display: flex;
       flex-direction: column;
       padding: 20px 0;
-      margin: 80px 0;
-      .artigos-box{
+      margin: 50px 0;
+      font-family: "Roboto Mono", monospace;
+      background-color: #f9fdff !important;
+
+      .artigos-box {
         width: 100%;
-        background-color: var(--cor2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         align-self: center;
         margin-top: 40px;
+        .artigo {
+          width: 85%;
+          color: rgb(0, 0, 0);
+          display: flex;
+          justify-content: space-around;
+          padding: 30px 50px;
+          margin: 30px 0;
+          align-items: center;
+          border-bottom: 1px solid rgba(167, 167, 167, 0.336);
+          align-items: center;
+          &:last-child {
+            border-bottom: none;
+          }
+          .area-title-artigo {
+            width: 25%;
+            font-size: 20px;
+          }
+          .area-descricao-artigo {
+            width: 100%;
+            padding: 0 25px;
+          }
+          i {
+            font-size: 35px;
+          }
+        }
       }
     }
-    #contactArea{
+    #contactArea {
       display: flex;
       flex-direction: column;
       align-items: center;
       padding: 20px 0;
-      .title-section{
+      .title-section {
         padding: 0;
       }
-      .contact-box{
-        max-width: 100%;
-        min-width: 50%;
-        height: 300px;
+      .contact-box {
+        max-width: 800px;
+        min-width: 60%;
+        min-height: 300px;
         background-color: var(--cor2);
         align-self: center;
+        align-items: center;
         margin-top: 40px;
         border-radius: 20px;
+        display: flex;
+        border-radius: 25px;
+        overflow: hidden;
+        padding: 20px 0;
+        .boxes {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .box-redes {
+          width: 50%;
+          height: 100%;
+          flex-direction: column;
+
+          .rede {
+            i {
+              font-size: 40px;
+              margin: 17px;
+              color: white;
+            }
+          }
+        }
+        .box-form {
+          width: 50%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: start;
+          padding-top: 15px;
+          .fomulario-contact {
+            width: 85%;
+            height: 100%;
+            padding-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            color: white;
+            input{
+              padding: 5px;
+            }
+            label {
+              margin: 10px;
+            }
+            button{
+              margin-top: 10px;
+              padding: 10px 0;
+              
+            }
+            #contact-textArea {
+              min-width: 80%;
+              max-width: 100%;
+              height: 80px;
+              resize: none;
+              margin-top: 10px;
+            }
+          }
+        }
       }
     }
   }
@@ -306,20 +384,24 @@ body {
   }
 }
 
-
 @media (max-width: 320px) {
+
+ 
 }
 
 @media (max-width: 375px) {
+  body main #contactArea .contact-box {
+    min-width: 98% !important;
+}
 }
 @media (max-width: 425px) {
   body main #container-welcome {
     padding: 20px 75px;
   }
-  #hamburguer{
+  #hamburguer {
     display: block !important;
   }
-  .menushow{
+  .menushow {
     transform: translateY(0px);
   }
   body header ul {
@@ -333,7 +415,7 @@ body {
     left: 0;
     justify-content: center;
 
-    #close{
+    #close {
       display: block !important;
       position: absolute;
       top: 0;
@@ -342,37 +424,74 @@ body {
       margin: 10px;
       color: white;
     }
+    body main #contactArea .contact-box {
+      min-width: 95%;
   }
-  body header ul li{
+  }
+  body header ul li {
     margin: 20px 0;
     font-size: 25px;
   }
-  
+
   body main #projects .projetos-cards {
     width: 100%;
   }
 }
 @media (max-width: 657px) {
-
-    body main #projects .projetos-cards .card-projeto {
-        width: 100%;
-    }
+  body main #projects .projetos-cards .card-projeto {
+    width: 100%;
+  }
+  body main #contactArea .contact-box {
+    min-width: 85%;
+  }
 }
 
 @media (max-width: 768px) {
-    body main #container-welcome {
-        grid-template-columns: 1fr;
-        justify-content: center;
-        text-align: center;
-        p{
-            font-size: 14px;
-        }
+  body main #container-welcome {
+    padding: 30px 0;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    text-align: center;
+    p {
+      font-size: 14px;
     }
+  }
+
+  body main #artigosArea .artigos-box .artigo {
+    flex-direction: column;
+    text-align: center;
+    border-bottom: 1px solid gray;
+    padding: 20px 0;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  body main #artigosArea .artigos-box .artigo .area-title-artigo {
+    width: 100%;
+  }
+  body main #artigosArea .artigos-box .artigo .area-descricao-artigo {
+    margin: 17px 0;
+  }
+  body main .title-section {
+    padding-left: 21px;
+  }
 }
 
 @media (max-width: 1024px) {
   body main #projects .projetos-cards {
     margin-left: 0;
+  }
+  body main #artigosArea .artigos-box .artigo {
+    width: 100%;
+  }
+  body main #contactArea .contact-box {
+    flex-direction: column;
+  }
+  body main #contactArea .contact-box .box-form .fomulario-contact {
+    width: 100%;
+  }
+  body main #contactArea .contact-box .box-form {
+    width: 75%;
   }
 }
 

@@ -9,7 +9,7 @@
 :root {
   --cor1: #242424;
   --cor2: #202020;
-  --ltwhite:white;
+  --ltwhite: white;
   --gray: #1d1d1f;
 }
 
@@ -103,7 +103,7 @@ body header ul li i {
 }
 body main .title-section {
   font-family: "Roboto Mono", monospace;
-  font-size: 50px;
+  font-size: min(9vw, 50px);
   font-weight: 300;
   color: var(--gray);
   padding-left: 50px;
@@ -251,13 +251,42 @@ body main #artigosArea {
   display: flex;
   flex-direction: column;
   padding: 20px 0;
-  margin: 80px 0;
+  margin: 50px 0;
+  font-family: "Roboto Mono", monospace;
+  background-color: #f9fdff !important;
 }
 body main #artigosArea .artigos-box {
   width: 100%;
-  background-color: var(--cor2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   align-self: center;
   margin-top: 40px;
+}
+body main #artigosArea .artigos-box .artigo {
+  width: 85%;
+  color: black;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 50px;
+  margin: 30px 0;
+  align-items: center;
+  border-bottom: 1px solid rgba(167, 167, 167, 0.336);
+  align-items: center;
+}
+body main #artigosArea .artigos-box .artigo:last-child {
+  border-bottom: none;
+}
+body main #artigosArea .artigos-box .artigo .area-title-artigo {
+  width: 25%;
+  font-size: 20px;
+}
+body main #artigosArea .artigos-box .artigo .area-descricao-artigo {
+  width: 100%;
+  padding: 0 25px;
+}
+body main #artigosArea .artigos-box .artigo i {
+  font-size: 35px;
 }
 body main #contactArea {
   display: flex;
@@ -269,13 +298,66 @@ body main #contactArea .title-section {
   padding: 0;
 }
 body main #contactArea .contact-box {
-  max-width: 100%;
-  min-width: 50%;
-  height: 300px;
+  max-width: 800px;
+  min-width: 60%;
+  min-height: 300px;
   background-color: var(--cor2);
   align-self: center;
+  align-items: center;
   margin-top: 40px;
   border-radius: 20px;
+  display: flex;
+  border-radius: 25px;
+  overflow: hidden;
+  padding: 20px 0;
+}
+body main #contactArea .contact-box .boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main #contactArea .contact-box .box-redes {
+  width: 50%;
+  height: 100%;
+  flex-direction: column;
+}
+body main #contactArea .contact-box .box-redes .rede i {
+  font-size: 40px;
+  margin: 17px;
+  color: white;
+}
+body main #contactArea .contact-box .box-form {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding-top: 15px;
+}
+body main #contactArea .contact-box .box-form .fomulario-contact {
+  width: 85%;
+  height: 100%;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+body main #contactArea .contact-box .box-form .fomulario-contact input {
+  padding: 5px;
+}
+body main #contactArea .contact-box .box-form .fomulario-contact label {
+  margin: 10px;
+}
+body main #contactArea .contact-box .box-form .fomulario-contact button {
+  margin-top: 10px;
+  padding: 10px 0;
+}
+body main #contactArea .contact-box .box-form .fomulario-contact #contact-textArea {
+  min-width: 80%;
+  max-width: 100%;
+  height: 80px;
+  resize: none;
+  margin-top: 10px;
 }
 
 @-webkit-keyframes salto {
@@ -299,6 +381,11 @@ body main #contactArea .contact-box {
   }
   100% {
     transform: translateY(0px);
+  }
+}
+@media (max-width: 375px) {
+  body main #contactArea .contact-box {
+    min-width: 98% !important;
   }
 }
 @media (max-width: 425px) {
@@ -334,6 +421,9 @@ body main #contactArea .contact-box {
     margin: 10px;
     color: white;
   }
+  body header ul body main #contactArea .contact-box {
+    min-width: 95%;
+  }
 
   body header ul li {
     margin: 20px 0;
@@ -348,9 +438,14 @@ body main #contactArea .contact-box {
   body main #projects .projetos-cards .card-projeto {
     width: 100%;
   }
+
+  body main #contactArea .contact-box {
+    min-width: 85%;
+  }
 }
 @media (max-width: 768px) {
   body main #container-welcome {
+    padding: 30px 0;
     grid-template-columns: 1fr;
     justify-content: center;
     text-align: center;
@@ -358,9 +453,47 @@ body main #contactArea .contact-box {
   body main #container-welcome p {
     font-size: 14px;
   }
+
+  body main #artigosArea .artigos-box .artigo {
+    flex-direction: column;
+    text-align: center;
+    border-bottom: 1px solid gray;
+    padding: 20px 0;
+  }
+  body main #artigosArea .artigos-box .artigo:last-child {
+    border-bottom: none;
+  }
+
+  body main #artigosArea .artigos-box .artigo .area-title-artigo {
+    width: 100%;
+  }
+
+  body main #artigosArea .artigos-box .artigo .area-descricao-artigo {
+    margin: 17px 0;
+  }
+
+  body main .title-section {
+    padding-left: 21px;
+  }
 }
 @media (max-width: 1024px) {
   body main #projects .projetos-cards {
     margin-left: 0;
+  }
+
+  body main #artigosArea .artigos-box .artigo {
+    width: 100%;
+  }
+
+  body main #contactArea .contact-box {
+    flex-direction: column;
+  }
+
+  body main #contactArea .contact-box .box-form .fomulario-contact {
+    width: 100%;
+  }
+
+  body main #contactArea .contact-box .box-form {
+    width: 75%;
   }
 }/*# sourceMappingURL=style.css.map */
