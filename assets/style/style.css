@@ -7,8 +7,9 @@
 }
 
 :root {
-  --roxo: #8122ff;
-  --roxo2: #862aff;
+  --cor1: #242424;
+  --cor2: #202020;
+  --ltwhite:white;
   --gray: #1d1d1f;
 }
 
@@ -54,7 +55,7 @@ body header {
   width: 100%;
   height: 80px;
   padding: 12px 20px;
-  background-color: var(--roxo);
+  background-color: var(--cor1);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -100,10 +101,17 @@ body header ul li a:hover {
 body header ul li i {
   font-size: 25px;
 }
+body main .title-section {
+  font-family: "Roboto Mono", monospace;
+  font-size: 50px;
+  font-weight: 300;
+  color: var(--gray);
+  padding-left: 50px;
+}
 body main #container-welcome {
   width: 100%;
   min-height: 250px;
-  background-color: var(--roxo2);
+  background-color: var(--cor2);
   position: relative;
   margin: 110px 0 60px 0;
   padding: 0 75px;
@@ -113,7 +121,6 @@ body main #container-welcome {
   color: white;
 }
 body main #container-welcome h1 {
-  font-family: "Roboto Mono", monospace;
   font-size: 60px;
   font-weight: 300;
 }
@@ -128,12 +135,6 @@ body main #projects {
   color: var(--gray);
   padding: 20px 0;
   font-family: "Roboto Mono", monospace;
-}
-body main #projects h1 {
-  font-size: 50px;
-  font-weight: 300;
-  color: var(--gray);
-  padding-left: 50px;
 }
 body main #projects .projetos-cards {
   width: 95%;
@@ -162,8 +163,8 @@ body main #projects .projetos-cards .card-projeto:hover {
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.24);
 }
 body main #projects .projetos-cards .card-projeto.html {
-  color: white !important;
-  background-color: var(--roxo2);
+  color: var(--ltwhite) !important;
+  background-color: var(--cor1);
 }
 body main #projects .projetos-cards .card-projeto.html > .categoria-projeto {
   border: 1px solid white;
@@ -172,8 +173,8 @@ body main #projects .projetos-cards .card-projeto.html > .nome-projeto h4 {
   color: white;
 }
 body main #projects .projetos-cards .card-projeto.scss {
-  color: white !important;
-  background-color: #004586;
+  color: var(--ltwhite) !important;
+  background-color: var(--cor1);
 }
 body main #projects .projetos-cards .card-projeto.scss > .categoria-projeto {
   border: 1px solid white;
@@ -182,8 +183,8 @@ body main #projects .projetos-cards .card-projeto.scss > .nome-projeto h4 {
   color: white;
 }
 body main #projects .projetos-cards .card-projeto.css {
-  color: white !important;
-  background-color: #00d38d;
+  color: var(--ltwhite) !important;
+  background-color: var(--cor1);
 }
 body main #projects .projetos-cards .card-projeto.css > .categoria-projeto {
   border: 1px solid white;
@@ -192,8 +193,8 @@ body main #projects .projetos-cards .card-projeto.css > .nome-projeto h4 {
   color: white;
 }
 body main #projects .projetos-cards .card-projeto.js {
-  color: white !important;
-  background-color: #c7ca00;
+  color: var(--ltwhite) !important;
+  background-color: var(--cor1);
 }
 body main #projects .projetos-cards .card-projeto.js > .categoria-projeto {
   border: 1px solid white;
@@ -246,6 +247,36 @@ body main #projects .projetos-cards .card-projeto .descricao-projeto a {
   left: 90%;
   color: black;
 }
+body main #artigosArea {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  margin: 80px 0;
+}
+body main #artigosArea .artigos-box {
+  width: 100%;
+  background-color: var(--cor2);
+  align-self: center;
+  margin-top: 40px;
+}
+body main #contactArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+body main #contactArea .title-section {
+  padding: 0;
+}
+body main #contactArea .contact-box {
+  max-width: 100%;
+  min-width: 50%;
+  height: 300px;
+  background-color: var(--cor2);
+  align-self: center;
+  margin-top: 40px;
+  border-radius: 20px;
+}
 
 @-webkit-keyframes salto {
   0% {
@@ -271,6 +302,10 @@ body main #projects .projetos-cards .card-projeto .descricao-projeto a {
   }
 }
 @media (max-width: 425px) {
+  body main #container-welcome {
+    padding: 20px 75px;
+  }
+
   #hamburguer {
     display: block !important;
   }

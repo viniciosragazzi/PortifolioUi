@@ -7,8 +7,9 @@
 }
 
 :root {
-  --roxo: #8122ff;
-  --roxo2: #862aff;
+  --cor1: #242424;
+  --cor2: #202020;
+  --ltwhite:white;
   --gray: #1d1d1f;
 }
 a {
@@ -52,7 +53,7 @@ body {
     width: 100%;
     height: 80px;
     padding: 12px 20px;
-    background-color: var(--roxo);
+    background-color: var(--cor1);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -101,10 +102,17 @@ body {
     }
   }
   main {
+    .title-section{
+      font-family: "Roboto Mono", monospace;
+      font-size: 50px;
+      font-weight: 300;
+      color: var(--gray);;
+      padding-left: 50px;
+    }
     #container-welcome {
       width: 100%;
       min-height: 250px;
-      background-color: var(--roxo2);
+      background-color: var(--cor2);
       position: relative;
       margin: 110px 0 60px 0;
       padding: 0 75px;
@@ -112,9 +120,8 @@ body {
       align-items: center;
       grid-template-columns: 1fr 1fr;
       color: white;
-
+     
       h1 {
-        font-family: "Roboto Mono", monospace;
         font-size: 60px;
         font-weight: 300;
       }
@@ -132,12 +139,7 @@ body {
       padding: 20px 0;
       font-family: "Roboto Mono", monospace;
 
-      h1 {
-        font-size: 50px;
-        font-weight: 300;
-        color: var(--gray);;
-        padding-left: 50px;
-      }
+   
 
       .projetos-cards {
         width: 95%;
@@ -165,8 +167,8 @@ body {
               box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.24);
           }
           &.html{
-            color: white !important;
-            background-color: var(--roxo2);
+            color: var(--ltwhite) !important;
+            background-color: var(--cor1);
             &> .categoria-projeto {
               border: 1px solid white;
             }
@@ -176,8 +178,8 @@ body {
 
           }
           &.scss{
-            color: white !important;
-            background-color: #004586;
+            color: var(--ltwhite) !important;
+            background-color:var(--cor1);
             &> .categoria-projeto {
               border: 1px solid white;
             }
@@ -188,8 +190,8 @@ body {
           }
 
           &.css{
-            color: white !important;
-            background-color: #00d38d;
+            color: var(--ltwhite) !important;
+            background-color: var(--cor1);
             &> .categoria-projeto {
               border: 1px solid white;
             }
@@ -200,8 +202,8 @@ body {
           }
 
           &.js{
-            color: white !important;
-            background-color: #c7ca00;
+            color: var(--ltwhite) !important;
+            background-color: var(--cor1);
             &> .categoria-projeto {
               border: 1px solid white;
             }
@@ -259,6 +261,36 @@ body {
         }
       }
     }
+    #artigosArea{
+      display: flex;
+      flex-direction: column;
+      padding: 20px 0;
+      margin: 80px 0;
+      .artigos-box{
+        width: 100%;
+        background-color: var(--cor2);
+        align-self: center;
+        margin-top: 40px;
+      }
+    }
+    #contactArea{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 0;
+      .title-section{
+        padding: 0;
+      }
+      .contact-box{
+        max-width: 100%;
+        min-width: 50%;
+        height: 300px;
+        background-color: var(--cor2);
+        align-self: center;
+        margin-top: 40px;
+        border-radius: 20px;
+      }
+    }
   }
 }
 
@@ -281,6 +313,9 @@ body {
 @media (max-width: 375px) {
 }
 @media (max-width: 425px) {
+  body main #container-welcome {
+    padding: 20px 75px;
+  }
   #hamburguer{
     display: block !important;
   }
