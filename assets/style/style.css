@@ -325,6 +325,7 @@ body main #contactArea .contact-box .box-redes .rede i {
   font-size: 40px;
   margin: 17px;
   color: white;
+  cursor: pointer;
 }
 body main #contactArea .contact-box .box-form {
   width: 50%;
