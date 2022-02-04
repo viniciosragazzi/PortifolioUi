@@ -72,6 +72,13 @@ const menuToggle = () =>{
   const close = document.querySelector('#close').addEventListener('click', () =>{
     navbar.classList.remove('menushow')
   })
+  const items = document.querySelectorAll('.navbar-item');
+  
+  items.forEach((e)=>{
+    e.addEventListener('click', ()=> {
+      navbar.classList.remove('menushow')
+    })
+  })
 }
 
 menuToggle()
