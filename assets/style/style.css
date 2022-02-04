@@ -421,7 +421,7 @@ body main #contactArea .contact-box .box-form .fomulario-contact #contact-textAr
   body header ul {
     flex-direction: column;
     position: absolute;
-    background: #862aff;
+    background: #ffffff !important;
     width: 100%;
     height: 100vh;
     transform: translateY(-105vh);
@@ -436,7 +436,7 @@ body main #contactArea .contact-box .box-form .fomulario-contact #contact-textAr
     right: 0;
     font-size: 45px;
     margin: 10px;
-    color: white;
+    color: black;
   }
   body header ul body main #contactArea .contact-box {
     min-width: 95%;
@@ -445,6 +445,11 @@ body main #contactArea .contact-box .box-form .fomulario-contact #contact-textAr
   body header ul li {
     margin: 20px 0;
     font-size: 25px;
+    color: white;
+  }
+
+  body header ul li a {
+    color: black;
   }
 
   body main #projects .projetos-cards {

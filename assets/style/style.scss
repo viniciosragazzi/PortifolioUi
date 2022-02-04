@@ -424,7 +424,7 @@ body {
   body header ul {
     flex-direction: column;
     position: absolute;
-    background: #862aff;
+    background: #ffffff !important;
     width: 100%;
     height: 100vh;
     transform: translateY(-105vh);
@@ -439,7 +439,7 @@ body {
       right: 0;
       font-size: 45px;
       margin: 10px;
-      color: white;
+      color: rgb(0, 0, 0);
     }
     body main #contactArea .contact-box {
       min-width: 95%;
@@ -448,8 +448,11 @@ body {
   body header ul li {
     margin: 20px 0;
     font-size: 25px;
+    color: white;
   }
-
+  body header ul li a {
+    color: rgb(0, 0, 0);
+  }
   body main #projects .projetos-cards {
     width: 100%;
   }
