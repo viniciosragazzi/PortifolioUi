@@ -75,3 +75,17 @@ const menuToggle = () =>{
 }
 
 menuToggle()
+
+
+window.sr = ScrollReveal({reset:true});
+
+sr.reveal('#h1-top', {duration:500, rotate:{ x:0, y:80, z:0}})
+
+sr.reveal('#p-top', {duration:500, rotate:{ x:0, y:80, z:0}})
+
+
+sr.reveal('.card-projeto',  {duration:1000, rotate:{ x:0, y:80, z:0}})
+
+sr.reveal('.artigo',  {duration:1000, rotate:{ x:0, y:80, z:0}})
+
+sr.reveal('.contact',  {duration:1000, rotate:{ x:0, y:80, z:0}})
