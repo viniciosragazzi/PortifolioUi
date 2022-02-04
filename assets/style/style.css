@@ -41,15 +41,15 @@ body .white-bar .white-bar_icons {
   width: -moz-fit-content;
   width: fit-content;
 }
-body .white-bar .white-bar_icons:hover > i {
+body .white-bar .white-bar_icons > i {
   -webkit-animation: salto 1s infinite;
           animation: salto 1s infinite;
 }
-body .white-bar .white-bar_icons:hover > i.meio {
+body .white-bar .white-bar_icons > i.meio {
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
 }
-body .white-bar .white-bar_icons:hover > i:last-child {
+body .white-bar .white-bar_icons > i:last-child {
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }

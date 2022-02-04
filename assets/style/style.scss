@@ -35,16 +35,14 @@ body {
     .white-bar_icons {
       cursor: pointer;
       width: fit-content;
-      &:hover {
-        > i {
-          animation: salto 1s infinite;
+      > i {
+        animation: salto 1s infinite;
 
-          &.meio {
-            animation-delay: 0.2s;
-          }
-          &:last-child {
-            animation-delay: 0.4s;
-          }
+        &.meio {
+          animation-delay: 0.2s;
+        }
+        &:last-child {
+          animation-delay: 0.4s;
         }
       }
       i {
